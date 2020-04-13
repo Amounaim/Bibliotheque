@@ -1,0 +1,66 @@
+<br><br>
+<div class="card">
+    <div class="row">
+        <aside class="col-sm-5 border-right">
+            <article class="gallery-wrap"> 
+                <div class="img-big-wrap">
+                    <div> <a href="#"><img style="max-width:420px;" *ngIf="book.photo" [src]="book.photo"></a></div>
+                </div> <!-- slider-product.// -->
+                <div class="img-small-wrap">
+                    <div class="item-gallery"> <img style="max-width:420px;" *ngIf="book.photo" [src]="book.photo"></div>
+                    <div class="item-gallery"> <img style="max-width:420px;" *ngIf="book.photo" [src]="book.photo"> </div>
+                    <div class="item-gallery"> <img style="max-width:420px;" *ngIf="book.photo" [src]="book.photo"> </div>
+                    <div class="item-gallery"> <img style="max-width:420px;" *ngIf="book.photo" [src]="book.photo"> </div>
+                </div> <!-- slider-nav.// -->
+            </article> <!-- gallery-wrap .end// -->
+        </aside>
+        
+		<aside class="col-sm-7">
+            <article class="card-body p-5">
+	            <h3 class="title mb-3">{{ book.title }}</h3>
+                <p class="price-detail-wrap"> 
+	                <span class="price h3 text-warning"> 
+		                <span class="currency">US $</span><span class="num">{{book.price}}</span>
+	                </span> 
+                </p> <!-- price-detail-wrap .// -->
+                <dl class="item-property">
+                    <dt>Description</dt>
+                    <dd><p>{{ book.synopsis }}</p></dd>
+                </dl>
+                <dl class="param param-feature">
+                    <dt>Model#</dt>
+                    <dd>12345611</dd>
+                </dl>  <!-- item-property-hor .// -->
+                <dl class="param param-feature">
+                    <dt>Author</dt>
+                    <dd>{{book.author}}</dd>
+                </dl>  <!-- item-property-hor .// -->
+                <dl class="param param-feature">
+                    <dt>Delivery</dt>
+                    <dd>Russia, USA, and Europe</dd>
+                </dl>  <!-- item-property-hor .// -->
+
+                <hr>
+	            <div class="row">
+		            <div class="col-sm-5">
+			            <dl class="param param-inline">
+			                <dt>Quantity: </dt>
+			                <dd>
+			  	                <select class="form-control form-control-sm" style="width:70px;">
+			  		                <option> 1 </option>
+			  		                <option> 2 </option>
+			  	            	    <option> 3 </option>
+			            	    </select>
+			                 </dd>
+			            </dl>  <!-- item-property .// -->
+		            </div> <!-- col.// -->
+		           
+	            </div> <!-- row.// -->
+	            <hr>
+	            <a  class="btn btn-lg btn-primary text-uppercase"> Buy now </a>
+	            <a  class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+            </article> <!-- card-body.// -->
+		</aside> <!-- col.// -->
+	</div> <!-- row.// -->
+</div> <!-- card.// -->
+<button class="btn btn-default" (click)="onBack()">Retour</button>
